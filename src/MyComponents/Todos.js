@@ -7,7 +7,11 @@ const Todos = (props) => {
           <h3 className="text-center my-3">Todos List</h3>
           {props.todos.length ===0? "No Todos to display": 
           props.todos.map((todo)=>{
-                return <TodoIteam todo={todo} key={todo.sno} onDelete={props.onDelete}/>
+                return (
+                    <>
+                <TodoIteam todo={todo} key={todo.sno} onDelete={props.onDelete}/> <hr/>
+                </>
+                )
           })
   }
 
